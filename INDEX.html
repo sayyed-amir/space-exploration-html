@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Exploration Timeline | HTML Only</title>
+    <meta name="description" content="Interactive timeline of space exploration milestones using pure HTML5">
+</head>
+<body>
+    <!-- Navigation with anchor links -->
+    <nav id="main-nav">
+        <h1>🚀 Space Exploration Timeline</h1>
+        <ul>
+            <li><a href="#1950s">1950s</a></li>
+            <li><a href="#1960s">1960s</a></li>
+            <li><a href="#1970s">1970s</a></li>
+            <li><a href="#modern">Modern Era</a></li>
+            <li><a href="#future">Future</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Timeline sections with details/summary -->
+        <section id="1950s">
+            <h2>📅 1950s - The Dawn of Space Age</h2>
+            <details>
+                <summary>Sputnik 1 (1957)</summary>
+                <p>The world's first artificial satellite launched by the Soviet Union.</p>
+                <audio controls>
+                    <source src="https://www.nasa.gov/audio-and-ringtones" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </details>
+            
+            <table border="1">
+                <caption>1950s Space Missions</caption>
+                <tr>
+                    <th>Year</th>
+                    <th>Mission</th>
+                    <th>Achievement</th>
+                </tr>
+                <tr>
+                    <td>1957</td>
+                    <td>Sputnik 1</td>
+                    <td>First artificial satellite</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Interactive quiz section -->
+        <section id="quiz">
+            <h2>🧠 Space Knowledge Quiz</h2>
+            <form action="mailto:test@example.com" method="post" enctype="text/plain">
+                <fieldset>
+                    <legend>Space Quiz</legend>
+                    
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required><br><br>
+                    
+                    <label>First human in space:</label>
+                    <input list="astronauts" name="astronaut">
+                    <datalist id="astronauts">
+                        <option value="Yuri Gagarin">
+                        <option value="Neil Armstrong">
+                        <option value="Buzz Aldrin">
+                    </datalist><br><br>
+                    
+                    <label>Rate your space knowledge:</label>
+                    <input type="range" id="knowledge" name="knowledge" min="1" max="10"><br><br>
+                    
+                    <label>Favorite planet color:</label>
+                    <input type="color" id="planet-color" name="planet-color" value="#4A90E2"><br><br>
+                    
+                    <textarea name="comment" rows="3" placeholder="Share your space thoughts..."></textarea><br><br>
+                    
+                    <input type="submit" value="Launch Quiz">
+                </fieldset>
+            </form>
+        </section>
+
+        <!-- Media gallery -->
+        <section id="gallery">
+            <h2>📸 Mission Gallery</h2>
+            <figure>
+                <img src="https://images-assets.nasa.gov/image/iss042e205788/iss042e205788~thumb.jpg" 
+                     alt="International Space Station" width="300">
+                <figcaption>ISS - International Space Station</figcaption>
+            </figure>
+            
+            <video width="320" height="240" controls>
+                <source src="https://www.nasa.gov/sites/default/files/atoms/video/ksc-20200208-ph_jhm01_0001_orig_web.mp4" 
+                        type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <!-- Interactive map section -->
+        <section id="missions-map">
+            <h2>🗺️ Live Missions Map</h2>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7347779.119380799!2d-100.8584594908073!3d26.169572307523075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640702f12d5b3cf%3A0x513e5abbff8c3a6e!2sNASA%20Johnson%20Space%20Center!5e0!3m2!1sen!2sus!4v1645541234567!5m2!1sen!2sus"
+                width="400" 
+                height="300" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </section>
+
+        <!-- Download resources -->
+        <section id="resources">
+            <h2>📁 Mission Resources</h2>
+            <p>Download space facts:</p>
+            <ul>
+                <li><a href="sample.pdf" download>Space Timeline PDF</a></li>
+                <li><a href="tel:+1234567890">📞 Call Space Info Line</a></li>
+                <li><a href="mailto:space@nasa.gov?subject=Space%20Inquiry">📧 Email NASA (Simulated)</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Hidden dialog popup -->
+    <dialog id="mission-dialog">
+        <form method="dialog">
+            <p>🚀 Welcome to Space Explorer! This dialog uses HTML5 dialog element.</p>
+            <button>Launch Mission</button>
+        </form>
+    </dialog>
+
+    <footer>
+        <p>&copy; 2024 Space Exploration Archive | 
+           <a href="#main-nav">Back to Top ↑</a> | 
+           <progress value="85" max="100">85%</progress> Timeline Complete
+        </p>
+        <meter value="0.9" min="0" max="1">90% awesome</meter>
+    </footer>
+
+    <script>
+        // Just for dialog demo - still HTML only as script is optional
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                document.getElementById('mission-dialog').showModal();
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
